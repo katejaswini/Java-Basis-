@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Deposit Money</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+}
+
+.deposit-container {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    margin: 120px auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.deposit-container h2 {
+    margin-bottom: 20px;
+}
+
+.deposit-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.deposit-container input[type="submit"] {
+    background: #2193b0;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.deposit-container input[type="submit"]:hover {
+    background: #6dd5ed;
+}
+</style>
+</head>
+
+<body>
+
+<div class="deposit-container">
+    <h2>Deposit Amount</h2>
+
+    <form action="depositServlet" method="post">
+        <input type="text" name="accountno" placeholder="Account Number" required>
+        <input type="text" name="phoneno" placeholder="Phone Number" required>
+        <input type="number" name="amount" placeholder="Deposit Amount" required>
+
+        <input type="submit" value="Deposit">
+    </form>
+</div>
+
+</body>
+</html>

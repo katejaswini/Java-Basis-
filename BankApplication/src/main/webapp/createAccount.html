@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create Account</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+.account-container {
+    width: 520px;
+    background: white;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.account-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #243b55;
+}
+
+.account-container input,
+.account-container select,
+.account-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.account-container textarea {
+    resize: none;
+}
+
+.account-container input[type="submit"] {
+    background: #243b55;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.account-container input[type="submit"]:hover {
+    background: #141e30;
+}
+</style>
+
+</head>
+<body>
+
+<div class="account-container">
+    <h2>Create New Bank Account</h2>
+
+    <!-- This form will later connect to createaccountservlet -->
+    <form action="CreateAccountServlet" method="post">
+
+        <input type="text" name="holdername" placeholder="Account Holder Name" required>
+
+        <input type="text" name="accountno" placeholder="Account Number" required>
+
+        <input type="text" name="panno" placeholder="PAN Number" required>
+
+        <input type="text" name="aadhaarno" placeholder="Aadhaar Number" required>
+
+        <input type="text" name="phoneno" placeholder="Phone Number" required>
+
+        <input type="number" name="balance" placeholder="Opening Balance" required>
+
+        <select name="accounttype" required>
+            <option value="">Select Account Type</option>
+            <option>Savings</option>
+            <option>Current</option>
+        </select>
+
+        <textarea name="address" placeholder="Address" rows="3"></textarea>
+
+        <input type="submit" value="Create Account">
+    </form>
+</div>
+
+</body>
+</html>

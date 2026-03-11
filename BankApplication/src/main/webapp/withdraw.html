@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Withdraw Money</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #cb2d3e, #ef473a);
+}
+
+.withdraw-container {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    margin: 120px auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.withdraw-container h2 {
+    margin-bottom: 20px;
+}
+
+.withdraw-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.withdraw-container input[type="submit"] {
+    background: #cb2d3e;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.withdraw-container input[type="submit"]:hover {
+    background: #ef473a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="withdraw-container">
+    <h2>Withdraw Amount</h2>
+
+    <form action="<%= request.getContextPath() %>/withdrawservlet" method="post">
+    
+        <input type="text" name="accountno" placeholder="Account Number" required>
+        <input type="text" name="phoneno" placeholder="Phone Number" required>
+        <input type="number" name="amount" placeholder="Withdraw Amount" required>
+
+        <input type="submit" value="Withdraw">
+    </form>
+</div>
+
+</body>
+</html>

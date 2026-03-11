@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Check Balance</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1d976c, #93f9b9);
+}
+
+.balance-container {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    margin: 120px auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.balance-container h2 {
+    margin-bottom: 20px;
+}
+
+.balance-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.balance-container input[type="submit"] {
+    background: #1d976c;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.balance-container input[type="submit"]:hover {
+    background: #93f9b9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="balance-container">
+    <h2>Check Balance</h2>
+
+    <form action="checkbalanceservlet" method="post">
+        <input type="text" name="accountno" placeholder="Account Number" required>
+        <input type="text" name="phoneno" placeholder="Phone Number" required>
+
+        <input type="submit" value="Check Balance">
+    </form>
+</div>
+
+</body>
+</html>
